@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Visit Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Mars Visit Application Form 🌌</h1>
+
+        <form id="marsForm">
+            <div class="form-stage active" id="stage1">
+                <h2>Stage 1: Personal Information</h2>
+                <label>Full Name:</label>
+                <input type="text" id="fullName" required>
+                
+                <label>Date of Birth:</label>
+                <input type="date" id="dob" required>
+
+                <label>Nationality:</label>
+                <input type="text" id="nationality" required>
+
+                <label>Email:</label>
+                <input type="email" id="email" required>
+
+                <label>Phone:</label>
+                <input type="tel" id="phone" required>
+
+                <button type="button" onclick="nextStage(1)">Next</button>
+            </div>
+
+            <div class="form-stage" id="stage2">
+                <h2>Stage 2: Travel Preferences</h2>
+                <label>Departure Date:</label>
+                <input type="date" id="departureDate" required>
+
+                <label>Return Date:</label>
+                <input type="date" id="returnDate" required>
+
+                <label>Accommodation Preference:</label>
+                <select id="accommodation" required>
+                    <option value="Space Hotel">Space Hotel</option>
+                    <option value="Martian Base">Martian Base</option>
+                </select>
+
+                <label>Special Requests:</label>
+                <textarea id="specialRequests"></textarea>
+
+                <button type="button" onclick="prevStage(2)">Back</button>
+                <button type="button" onclick="nextStage(2)">Next</button>
+            </div>
+
+            <div class="form-stage" id="stage3">
+                <h2>Stage 3: Health and Safety</h2>
+                <label>Health Declaration:</label>
+                <select id="healthDeclaration" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+
+                <label>Emergency Contact:</label>
+                <input type="text" id="emergencyContact" required>
+
+                <label>Medical Conditions (if any):</label>
+                <textarea id="medicalConditions"></textarea>
+
+                <button type="button" onclick="prevStage(3)">Back</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+
+        <div id="successMessage" class="hidden">
+            <h2>🎉 Application Submitted Successfully! 🚀</h2>
+            <p>Thank you for your interest in visiting Mars. We will contact you soon!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

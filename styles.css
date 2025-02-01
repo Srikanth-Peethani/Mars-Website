@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('mars.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+.container {
+    width: 40%;
+    margin: 50px auto;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1, h2 {
+    color: #ff9800;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #ff9800;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #e68900;
+}
+
+.form-stage {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
